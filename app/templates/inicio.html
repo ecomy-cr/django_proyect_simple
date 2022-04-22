@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>FORMULARIO DE EJEMPLO</title>
+    </head>
+    <body>
+        <h1>SEGURIDAD CRFS EN FORMULARIO</h1>
+        
+        <form action="/exito/" method="POST">{% csrf_token %}
+            <p>Asunto: <input type="text" name="txtAsunto"/></p>
+            <p>Email: <input type="email" name="txtEmail"/></p>
+            <p>
+                Mensaje:
+                <textarea name="txtMensaje" cols="30" rows="5" style="resize: none;"></textarea>
+            </p>
+            <input type="submit" value="Verificar datos"/>
+        </form>
+    </body>
+</html>
